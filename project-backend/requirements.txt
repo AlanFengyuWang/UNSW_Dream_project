@@ -1,0 +1,7 @@
+Flask==1.1.2
+requests==2.25.1
+Werkzeug==1.0.1
+Flask_Cors==3.0.10
+pytest==6.2.2
+Flask_Mail==0.9.1
+PyJWT==2.0.1

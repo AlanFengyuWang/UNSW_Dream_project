@@ -1,0 +1,45 @@
+{
+    "users" : [
+        {
+            "u_id" : 000001,
+            "email" : "email@email.com",
+            "name_first" : "firstname",
+            "name_last" : "lastname",
+            "handle_str" : "firstnamelastname",
+            "password" : "asdfl;kahsdfklugasdfkjhasd;lfkjas234",
+            "profile_img_url": "defaultimg.jpg",
+            "notifications" : [{
+            }],
+            "sessions_list" : [
+                {"session_id" : 1},
+                {"session_id" : 2},
+            ]
+        }
+    ],
+    "channels" : [
+        {
+            "channel_id" : 300000,
+            "channel_name" : "channelname",
+            "messages" : [
+                {
+                    "message_id" : 123456,
+                    "u_id" : 000001,
+                    "message" : "this is a message",
+                    "time_created" : 12000000,
+                    "is_pinned" : True,
+                    "reacts" : [
+                        {
+                            "react_id": 1,
+                            "u_ids": [1,2,3,4,5,6],
+                            "is_this_user_reacted": True
+                        }
+                    ]
+                }
+            ],
+            "owner_members" : [],
+            "all_members" : [],
+            "is_public" : true, 
+            "is_dm": false
+        }
+    ]
+}

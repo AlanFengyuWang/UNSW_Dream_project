@@ -1,0 +1,46 @@
+Auth_register_v1:
+    1) Assume that we have the global varialbe "data" dictionary which include the keys "users" and "channels"
+    2) Assume the given email, name_first, name_last are string, password is string.
+    3) Assume the email data is stored into the dictionary successfully for checking the repeated email
+
+Auth_login_v1:
+    1) Assume that our email, password inputs are in string format
+    2) Assume the email data and password data are stored in the dictionary successfully.
+
+channel_details_v1
+    1) Assume every owner of a channel is also a member.
+
+channel_join_v1
+    1) Assume global owner is first user to be added
+
+channel_invite_v1:
+    1) You can invite a user to a channel whether it's public or not.
+    2) User being invited should not already be in the channel.
+    3) Once invited, the user is a part of the channel's "all_members" field.
+    
+channels_create_v1:
+    1) The paramater "auth_user_id" is valid.
+        -> i.e. It is passed on as an integer and not some other data type.
+    2) The user that runs channels_create_v1 is automatically is in that channel by default
+    3) All channel ids that are generated are unique 
+        -> If the same user creates multiple channels, then the channels will have different ids
+    4) The auth_id passed in should exist in the data file.
+        -> If someone tried creating a channel without an auth_user_id, an error should be raised.
+
+message_send:
+    1) Channel message being sent to is valid.
+search:
+    1) Given an empty query string, return all messages avaliable to the user
+    2) Given a string, each message only has to contain a query string, not match as a whole word
+
+admin:
+    the first user to be created is a dreams owner
+    when a user is removed their first name and last name are both replaced with "removed user"
+    when a user is removed they can no longer log in
+    when an admin attempts to change the permission of the last owner an Input error is thrown
+
+password reset:
+    when a user successfully resets a password, it logs them out of all logged in sessions
+
+user stats:
+    the number of messages sent includes messages sent into a dm
